@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    height: 100vh;
+    background-color: #000;
+}
+
+.neon-box {
+    width: 300px;
+    height: 200px;
+    background-color: #111;
+    border: 5px solid #ae00ff;
+    border-radius: 15px;
+    box-shadow: 
+        0 0 10px #ae00ff, 
+        0 0 20px #ae00ff, 
+        0 0 30px #ae00ff, 
+        0 0 40px #ae00ff;
+    animation: zigzag 10s linear infinite, glow 1.5s ease-in-out infinite alternate;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    text-align: center;
+}
+
+.neon-text {
+    color: #fff;
+    font-size: 1.2rem;
+    font-family: 'Arial', sans-serif;
+    text-shadow: 
+        0 0 5px #ae00ff, 
+        0 0 10px #ae00ff, 
+        0 0 15px #ae00ff, 
+        0 0 20px #ae00ff;
+}
+
+@keyframes zigzag {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(calc(100vw - 300px), calc(100vh - 200px));
+    }
+    50% {
+        transform: translate(calc(100vw - 300px), 0);
+    }
+    75% {
+        transform: translate(0, calc(100vh - 200px));
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 
+            0 0 10px #a36fe6, 
+            0 0 20px #a36fe6, 
+            0 0 30px #a36fe6, 
+            0 0 40px #a36fe6;
+    }
+    to {
+        box-shadow: 
+            0 0 20px #a36fe6, 
+            0 0 30px #a36fe6, 
+            0 0 40px #a36fe6, 
+            0 0 50px #a36fe6
